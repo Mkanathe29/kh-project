@@ -35,7 +35,6 @@ pipeline {
           }
         }
         stage('Deploying container to Kubernetes') {
-            agent {label 'control-plane'}
                 steps {
                      sh "helm install project-1 python-project --set appimage=${registry}:v${BUILD_NUMBER}"
             }

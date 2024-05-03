@@ -1,14 +1,14 @@
 pipeline {
     agent any
     environment {
-        registry = "pragya549/python-app"
+        registry = "mkanathe/python-app"
         registryCredential = 'dockerhub'
     }
 
     stages {
         stage('git checkout') {
             steps {
-                git branch: 'project-1', url: 'https://github.com/Pragya549/kh-project.git'
+                git branch: 'project-1', url: 'https://github.com/Mkanathe29/kh-project.git'
             }
         }
         
